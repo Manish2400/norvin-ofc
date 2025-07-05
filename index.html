@@ -2,20 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+
+  <!-- ✅ Required for media queries to work -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Norvin Website</title>
 
-  <!-- Google Fonts -->
+  <!-- ✅ Fonts (Poppins + StopD) -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/stopd" rel="stylesheet">
 
-  <!-- Stylesheets -->
+  <!-- ✅ Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Lottie + AOS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+  <!-- ✅ AOS for animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://fonts.cdnfonts.com/css/stopd" rel="stylesheet">
+
+  <!-- ✅ Lottie -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+</head>
 
 
   <style>
@@ -52,164 +58,126 @@
     }
   </style>
   <script>
-  AOS.init({
-    duration: 800,
-    once: true
-  });
-</script>
-
+    AOS.init({ duration: 800, once: true });
+  </script>
 </head>
 <body>
 
   <!-- Navbar -->
   <header>
     <div class="nav-container">
-      <!-- Left Nav -->
       <nav class="main-nav">
         <div class="nav-item"><a href="#about">About</a></div>
         <div class="nav-item"><a href="#pricing">Pricing</a></div>
         <div class="nav-item"><a href="#features">Features</a></div>
       </nav>
-
-      <!-- Center Logo -->
       <div class="logo-area">
         <img src="preview.png" alt="Norvin Logo" class="logo" />
       </div>
-
-      <!-- Right Auth -->
-      <!-- <div class="auth-buttons">
-        <button class="sign-in-btn">Sign In</button>
-        <button class="sign-up-btn">Join Now</button>
-      </div> -->
-
       <a href="#demo" class="nav-demo-link">Spin It 3D 🔄 <span>(Coming Soon)</span></a>
-
-      <!-- Mobile Menu -->
       <div class="menu-toggle" onclick="toggleMobileMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </div>
     </div>
   </header>
 
-<!-- Hero -->
-<section class="hero">
-  <div class="hero-content">
-    <h1 class="hero-title">
-  Welcome to <img src="preview.png" alt="Norvin" class="norvin-inline-logo" /></h1>
-    <p>Your complete solution for next-gen product manufacturing</p>
-  </div>
-</section>
-
-<!-- Hand Images -->
-<figure class="hero-hand hero-hand-left">
-  <img src="lefthand.svg" alt="Left Hand" />
-</figure>
-
-<figure class="hero-hand hero-hand-right">
-  <img src="righthand.svg" alt="Right Hand" />
-</figure>
-
-  <!-- GSAP Animation -->
-  <script>
-    gsap.from(".reveal", {
-      y: 60,
-      opacity: 0,
-      duration: 1.2,
-      ease: "power3.out",
-      stagger: 0.2
-    });
-  </script>
-
-  <!-- Why Partner With Norvin (new version only) -->
-<section class="norvin-stack">
-  <div class="stack-heading">
-    <h2>Why Partner</h2>
-    <h3>With Norvin</h3>
-  </div>
-
-  <div class="norvin-card card-one">
-    <div class="card-text-box">
-      <h2>In-House Expertise</h2>
-      <p>We control the full process from factory to shipment for quality that never slips.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Welcome to <img src="preview.png" alt="Norvin" class="norvin-inline-logo" />
+      </h1>
+      <p>Driving the future of electrical product manufacturing — built for scale, made for trust.</p>
     </div>
-  </div>
+  </section>
 
-  <div class="norvin-card card-two">
-    <div class="card-text-box">
-      <h2>Scalable Operations</h2>
-      <p>We support bulk manufacturing without compromising quality — ever.</p>
+  <figure class="hero-hand hero-hand-left">
+    <img src="lefthand.svg" alt="Left Hand" />
+  </figure>
+  <figure class="hero-hand hero-hand-right">
+    <img src="righthand.svg" alt="Right Hand" />
+  </figure>
+
+  <!-- Why Partner With Norvin -->
+  <section class="norvin-stack">
+    <div class="stack-heading">
+      <h2>Why Partner</h2>
+      <h3>With Norvin</h3>
     </div>
-  </div>
-
-  <div class="norvin-card card-three">
-    <div class="card-text-box">
-      <h2>Reliable Distribution</h2>
-      <p>On-time, pan-India logistics. We deliver, literally and figuratively.</p>
+    <div class="norvin-card card-one">
+      <div class="card-text-box">
+        <h2>In-House Expertise</h2>
+        <p>We manage every stage — from raw materials to finished goods — to maintain consistent quality.</p>
+      </div>
     </div>
-  </div>
-</section>
+    <div class="norvin-card card-two">
+      <div class="card-text-box">
+        <h2>Scalable Operations</h2>
+        <p>Our infrastructure handles bulk orders with speed and precision, without compromise.</p>
+      </div>
+    </div>
+    <div class="norvin-card card-three">
+      <div class="card-text-box">
+        <h2>Reliable Distribution</h2>
+        <p>We ensure on-time delivery across India with proven logistics systems and real accountability.</p>
+      </div>
+    </div>
+  </section>
 
-<!-- Our Process Section -->
-<div class="our-process-section">
-  <div class="our-process-scroll-wrapper">
-    <div class="our-process-container">
-
-      <!-- LEFT SIDE -->
-      <div class="our-process-left">
-        <div class="process-heading-img-wrapper clean-layout">
-          <!-- Text Box -->
-          <div class="process-heading-box">
-            <h3 class="process-subheading">our progress</h3>
-            <h2 class="process-main-heading">Built to Work, Designed to Win</h2>
-            <h6 class="process-subheading">Our process moves fast, stays smart, and doesn’t break under pressure</h6>
+  <!-- Our Process -->
+  <div class="our-process-section">
+    <div class="our-process-scroll-wrapper">
+      <div class="our-process-container">
+        <div class="our-process-left">
+          <div class="process-heading-img-wrapper clean-layout">
+            <div class="process-heading-box">
+              <h3 class="process-subheading">Our Progress</h3>
+              <h2 class="process-main-heading">Built to Work, Designed to Win</h2>
+              <h6 class="process-subheading">Our manufacturing process is streamlined, scalable, and designed for results.</h6>
+            </div>
+            <div class="process-image-box">
+              <img src="2hands.svg" alt="Visual" />
+            </div>
           </div>
-
-          <!-- Image Box -->
-          <div class="process-image-box">
-            <img src="2hands.svg" alt="Visual" />
+        </div>
+        <div class="our-process-right scroll-cards">
+          <div class="process-card-box">
+            <div class="process-card-text">
+              <h3>1</h3>
+              <h2>Consult</h2>
+              <p>We work closely to understand your needs and design a tailored production approach.</p>
+            </div>
+          </div>
+          <div class="process-card-box">
+            <div class="process-card-text">
+              <h3>2</h3>
+              <h2>Manufacture</h2>
+              <p>Our team fabricates your products with high-precision equipment and trained engineers.</p>
+            </div>
+          </div>
+          <div class="process-card-box">
+            <div class="process-card-text">
+              <h3>3</h3>
+              <h2>Ship</h2>
+              <p>Products are packaged and dispatched swiftly through our distribution network.</p>
+            </div>
+          </div>
+          <div class="process-card-box">
+            <div class="process-card-text">
+              <h3>4</h3>
+              <h2>Quality Check</h2>
+              <p>Each item is rigorously inspected before it leaves our facility, ensuring reliability.</p>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- ✅ RIGHT SIDE: Move this inside -->
-      <div class="our-process-right scroll-cards">
-        <div class="process-card-box" id="card-1">
-          <div class="process-card-text">
-            <h3>1</h3>
-            <h2>Consult</h2>
-            <p>We understand your needs and goals to create a tailored manufacturing plan.</p>
-          </div>
-        </div>
-        <div class="process-card-box" id="card-2">
-          <div class="process-card-text">
-            <h3>2</h3>
-            <h2>Manufacture</h2>
-            <p>Our team gets to work producing high-quality goods at our certified facilities.</p>
-          </div>
-        </div>
-        <div class="process-card-box" id="card-3">
-          <div class="process-card-text">
-            <h3>3</h3>
-            <h2>Ship</h2>
-            <p>Once quality checks are passed, we dispatch your products quickly and reliably.</p>
-          </div>
-        </div>
-        <div class="process-card-box" id="card-4">
-          <div class="process-card-text">
-            <h3>4</h3>
-            <h2>Quality Check</h2>
-            <p>Every product is inspected with precision to meet high-quality standards before shipping.</p>
-          </div>
-        </div>
-      </div>
-    </div> <!-- END .our-process-container -->
+    </div>
   </div>
-</div>
-<!-- <p class="transition-tagline">Where Strategy Meets Systems</p> -->
+
   <!-- Explore Our Production Line -->
-   <section class="container-9">
+  <!-- <p class="transition-tagline">Where Strategy Meets Systems</p> -->
+  <!-- Explore Our Production Line -->
+<section class="container-9">
   <h2 class="container-9-text">Explore Our Production Line</h2>
   <div class="card-row">
 
@@ -293,80 +261,63 @@
     <div class="stats-grid">
       <div class="stat-box">
         <h3>⚡ Launching Soon</h3>
-        <p>Be part of the first wave</p>
+        <p>We're building something that lasts — from the ground up.</p>
       </div>
       <div class="stat-box">
         <h3>🛠️ Built by Engineers</h3>
-        <p>Not just marketers</p>
+        <p>Run by those who understand manufacturing, not just marketing.</p>
       </div>
       <div class="stat-box">
         <h3>🎯 Focused on Quality</h3>
-        <p>Not quantity (yet)</p>
+        <p>Our focus is precision, durability, and performance in every unit.</p>
       </div>
       <div class="stat-box">
         <h3>🤝 B2B Partnerships</h3>
-        <p>We work directly with distributors</p>
+        <p>We collaborate directly with distributors and wholesalers across industries.</p>
       </div>
     </div>
   </section>
 
-<!-- Main Footer -->
-<footer class="footer">
-  <div class="footer-top">
-    <ul class="footer-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#concept">Concept</a></li>
-      <li><a href="#resources">Resources</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#concept">Concept</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom-line">
+      <div class="footer-contact">
+        <span>📞 +91 7305263263</span>
+        <span class="divider">|</span>
+        <span>📧 norvinindustries@gmail.com</span>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/norvinindustries/" target="_blank">
+          <img src="instagram-icon.png" alt="Instagram" />
+        </a>
+        <a href="https://wa.me/7305263263" target="_blank">
+          <img src="whatsapp-icon.png" alt="WhatsApp" />
+        </a>
+      </div>
+      <div class="footer-rights">
+        © 2025 Norvin. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <div class="norvin-trigger-zone"></div>
+  <div class="norvin-animation-trigger">
+    <div class="big-footer-logo" id="footer-logo-animate">
+      <span>N</span><span>O</span><span>R</span><span>V</span><span>I</span><span>N</span>
+    </div>
   </div>
 
-  <div class="footer-bottom-line">
-    <div class="footer-contact">
-      <span>📞 +91 7305263263</span>
-      <span class="divider">|</span>
-      <span>📧 norvinindustries@gmail.com</span>
-    </div>
-
-    <div class="footer-socials">
-      <a href="https://www.instagram.com/manish.lum/" target="_blank">
-        <img src="instagram-icon.png" alt="Instagram" />
-      </a>
-      <a href="https://wa.me/7305263263" target="_blank">
-        <img src="whatsapp-icon.png" alt="WhatsApp" />
-      </a>
-    </div>
-
-    <div class="footer-rights">
-      © 2025 Norvin. All rights reserved.
-    </div>
-  </div>
-</footer>
-
-<!-- 🔥 Animation Trigger Zone -->
-<div class="norvin-trigger-zone"></div>
-
-<!-- 🚀 Final Big NORVIN Text Animation -->
-<div class="norvin-animation-trigger">
-  <div class="big-footer-logo" id="footer-logo-animate">
-    <span>N</span>
-    <span>O</span>
-    <span>R</span>
-    <span>V</span>
-    <span>I</span>
-    <span>N</span>
-  </div>
-</div>
-
-
-<!-- Scripts -->
-<script src="script.js"></script>
-<script>
-  AOS.init({
-    duration: 1500,
-    once: true,
-  });
-</script>
-<script src="entryAnimation.js"></script>
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script>AOS.init({ duration: 1500, once: true });</script>
+  <script src="entryAnimation.js"></script>
 </body>
 </html>

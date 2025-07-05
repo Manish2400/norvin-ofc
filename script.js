@@ -148,6 +148,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   observer.observe(triggerDiv);
 });
+document.addEventListener("DOMContentLoaded", function () {
+  AOS.init({
+    duration: 800,
+    once: true,
+    easing: 'ease-in-out',
+  });
+});
 
 
 

@@ -18,6 +18,7 @@ html, body {
 }
 body {
   background: #fffaf4;
+  overflow-x: hidden;
 }
 
 header {
@@ -1750,3 +1751,225 @@ body {
   color: #d1d1d1;
   margin-left: 6px;
 }
+
+
+
+/* mobile frendly */
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Hide navbar */
+  header,
+  .nav-container {
+    display: none !important;
+  }
+
+  /* HERO Section */
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-image img,
+  .hero-hand-left,
+  .hero-hand-right {
+    display: none !important;
+  }
+
+  .hero {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  /* WHY PARTNER Section */
+  .why-card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .why-card {
+    width: 90%;
+    height: auto;
+    transform: none !important;
+  }
+
+  .norvin-stack {
+    padding: 0 16px;
+    box-sizing: border-box;
+    margin-bottom: 0;
+  }
+
+  .norvin-card {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transform: none !important;
+    height: auto !important;
+  }
+
+  /* OUR PROCESS Section */
+  .our-process-section {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .our-process-container,
+  .our-process-scroll-wrapper {
+  max-width: 100%;
+  overflow-x: hidden;
+  }
+
+  .our-process-left {
+    width: 100%;
+    max-width: 100%;
+    position: relative !important;
+    top: auto !important;
+    margin-bottom: 20px;
+  }
+
+  .process-heading-img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .process-heading-box {
+    width: 257px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .process-image-box {
+    width: 90px;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+  .process-image-box img {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+  }
+
+  .our-process-right {
+    width: 100%;
+    padding-top: 0;
+    margin-right: 50px;
+  }
+
+  .scroll-cards {
+    position: relative;
+    height: auto;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .process-card-box {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 20px auto;
+    position: relative !important;
+    transform: none !important;
+  }
+
+  .our-process-card {
+    position: relative !important;
+    transform: none !important;
+    height: auto !important;
+  }
+
+  /* OUR BENEFITS Section */
+  .our-benefits-card {
+    width: 90%;
+    height: auto;
+    margin: 0 auto 20px auto;
+  }
+
+  /* STATS Section */
+  .stats-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-box {
+    width: 90%;
+    text-align: center;
+  }
+
+  /* FOOTER */
+  .footer-top {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .big-footer-logo {
+    font-size: 15vw;
+    text-align: center;
+  }
+  /* Add space between heading block and cards */
+.our-process-left {
+  margin-bottom: 100px;
+}
+
+/* Center-align all scroll cards */
+.scroll-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.process-card-box {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  }
+  .process-card-text {
+  text-align: center;
+  margin-right: 31px;
+  }
+  .container-9-text {
+  text-align: center;
+  margin: 0 auto 20px auto;
+  width: 100%;
+  }
+  .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  }
+
+
+}
+
+
+
