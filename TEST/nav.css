@@ -1,0 +1,158 @@
+/* ===== NAVBAR (DESKTOP) ===== */
+.nv-navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 50px;
+  background: #000;
+  border-bottom: none; /* remove any line */
+  z-index: 100;
+}
+
+/* LEFT LINKS */
+.nv-left-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* RIGHT LINKS */
+.nv-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* REMOVE UNDERLINE FROM ALL LINKS */
+.nv-left-links a,
+.nv-right a {
+  text-decoration: none !important;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* underline animation only for left links */
+.nv-left-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+.nv-left-links a:hover::after {
+  width: 100%;
+}
+
+/* LOGO CENTER */
+.nv-logo {
+  width: 250px;
+  height: auto;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+/* SIGN IN BUTTON */
+.nv-btn {
+  border: 2px solid #fff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1.05rem;
+  color: #fff;
+  transition: 0.25s ease;
+}
+
+.nv-btn:hover {
+  background: #fff;
+  color: #000;
+}
+/* ================= MOBILE NAV (<=768px) ================= */
+@media (max-width: 768px) {
+
+  .nv-navbar {
+    padding: 18px 20px;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* Bigger logo + center fix */
+  .nv-logo {
+    width: 260px;        
+    position: absolute;
+    left: 240px;
+    transform: translateX(-50%);
+    z-index: 20;
+  }
+
+  /* Hide desktop links */
+  .nv-left-links {
+    display: none;
+  }
+
+  /* Right side only shows hamburger */
+  .nv-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nv-btn {
+    display: none; /* hide desktop Sign In */
+  }
+
+  /* Bigger hamburger icon */
+  .nv-menu-icon {
+    font-size: 40px;     
+    color: #fff;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 30;
+  }
+
+  /* Mobile Slide Menu */
+  .nv-mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000;
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 25;
+  }
+
+  .nv-mobile-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25rem;
+    display: block;
+  }
+
+  /* REMOVE SIGN IN BUTTON FROM MOBILE MENU */
+  .nv-mobile-menu .nv-btn {
+    display: none;
+  }
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 769px) {
+  .nv-mobile-menu {
+    display: none !important;
+  }
+}

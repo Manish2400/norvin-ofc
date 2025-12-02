@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Product Detail</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="product.css">
+  <link rel="stylesheet" href="footer.css">
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Product Section -->
+  <div class="product-page">
+
+    <div class="product-info">
+      <h2 id="product-title"></h2>
+      <p id="product-description"></p>
+
+      <div class="product-specs">
+        <p><span class="label">Category:</span> <span id="product-category"></span></p>
+        <p><span class="label">Color:</span> <span id="product-color"></span></p>
+        <p><span class="label">Type:</span> <span id="product-type"></span></p>
+      </div>
+
+      <button id="enquiry-btn">
+        ENQUIRY <span class="arrow">↗</span>
+      </button>
+    </div>
+
+    <div class="product-image">
+      <img id="product-image" src="" alt="Product Image" />
+    </div>
+
+  </div>
+
+  <!-- Enquiry Modal -->
+  <div id="enquiry-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>Enquiry Form</h3>
+      <input type="text" placeholder="Your Name" />
+      <input type="email" placeholder="Your Email" />
+      <textarea placeholder="Your Message"></textarea>
+      <button>Submit</button>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="section-divider"></div>
+
+  <!-- Related Section -->
+  <div class="related-section">
+
+    <div class="related-top-text">YOU MIGHT ALSO LIKE</div>
+
+    <div class="related-line"></div>
+
+    <h2 class="related-heading">YOU MIGHT ALSO LIKE</h2>
+
+    <div class="related-products" id="related-products"></div>
+
+  </div>
+
+  <!-- JS -->
+  <script type="module" src="product.js"></script>
+  <script src="nav.js" defer></script>
+
+  <!-- Footer -->
+  <div id="nv-footer"></div>
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("nv-footer").innerHTML = html;
+      });
+  </script>
+
+</body>
+</html>

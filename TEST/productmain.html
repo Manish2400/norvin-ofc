@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Norvin</title>
+  <!-- Styles -->
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="productmain.css">
+  <link rel="stylesheet" href="product.css">
+  <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="product-category">
+      <div id="product-list" class="product-grid">
+        <!-- JS WILL RENDER ALL PRODUCTS HERE -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="nav.js" defer></script>
+  <script type="module" src="productmain.js"></script>
+
+  <div id="nv-footer"></div>
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("nv-footer").innerHTML = html;
+      });
+  </script>
+
+</body>
+</html>

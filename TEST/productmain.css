@@ -1,0 +1,311 @@
+
+ /* ===== RESET & GLOBAL ===== */
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+/* ===== INFINITE SCROLL (TOP) ===== */
+.infinite-scroll {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: white;
+  padding: 20px 0;
+}
+
+.infinite-scroll .scroll-track {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+  animation: scroll 10s linear infinite;
+}
+
+.infinite-scroll .scroll-track a {
+  flex-shrink: 0;
+  display: inline-block;
+  pointer-events: auto;
+}
+
+.infinite-scroll .scroll-track img {
+  height: 200px;
+  transition: filter 0.3s ease;
+  filter: none;
+  pointer-events: auto;
+}
+
+/* Hover grayscale + pause */
+.infinite-scroll:hover .scroll-track {
+  animation-play-state: paused;
+}
+.infinite-scroll:hover .scroll-track img {
+  filter: grayscale(1);
+}
+.infinite-scroll .scroll-track img:hover {
+  filter: grayscale(0) !important;
+}
+
+/* Fade corners */
+.image-fade-left,
+.image-fade-right {
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.image-fade-left {
+  left: 0;
+  background: linear-gradient(to right, white 60%, transparent);
+}
+.image-fade-right {
+  right: 0;
+  background: linear-gradient(to left, white 60%, transparent);
+}
+
+/* Infinite scroll keyframes */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ===== NEW PAGE BG ===== */
+body {
+  background: #000 !important;
+}
+
+/* ===== PRODUCT GRID ===== */
+#product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+
+/* ===== PRODUCT CARD ===== */
+.product-card {
+  background: #fff;
+  color: #000;
+  border-radius: 22px;
+  padding: 25px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.4);
+}
+
+/* IMAGE */
+.product-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.product-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #000;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.product-card {
+  background: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  padding: 20px;
+  transition: all 0.35s ease;
+}
+
+.product-card:hover {
+  border-color: rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 0 20px rgba(255, 255, 255, 0.8),
+    0 0 40px rgba(255, 255, 255, 0.6),
+    0 0 70px rgba(255, 255, 255, 0.4),
+    0 0 110px rgba(255, 255, 255, 0.25);
+}
+
+
+/* BUTTON (Amazon style) */
+.product-card .btn {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #000;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.product-card .btn:hover {
+  background: #000;
+  color: #fff;
+  transform: scale(1.03);
+}
+
+/* MOBILE */
+@media (max-width: 500px) {
+  .product-card {
+    height: auto;
+  }
+}
+
+
+/* ===== MODAL IMAGE STYLING ===== */
+.modal-content img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+/* ===== SECOND SCROLL CONTAINER ===== */
+.scroll-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.scroll-container .scroll-track {
+  display: flex;
+  gap: 20px;
+  animation: scrollLeft 7s linear infinite;
+}
+
+.scroll-container img {
+  height: 150px;
+  width: auto;
+}
+
+/* Hover grayscale + pause for 2nd scroller */
+.scroll-container:hover .scroll-track {
+  animation-play-state: paused;
+}
+.scroll-container:hover .scroll-track img {
+  filter: grayscale(1);
+}
+.scroll-container .scroll-track img:hover {
+  filter: grayscale(0) !important;
+}
+
+/* Fades for 2nd scroller */
+.fade-left,
+.fade-right {
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.fade-left {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+.fade-right {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+}
+
+/* Keyframes for 2nd scroller */
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ===== TEXT MARQUEE ===== */
+.text-marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.72);
+  padding: 6px 0;
+  position: relative;
+  white-space: nowrap;
+}
+
+.text-marquee-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 8s linear infinite;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+}
+
+.text-marquee-track span {
+  display: inline-block;
+  margin: 0 25px;
+}
+
+/* Marquee keyframes */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+
+
+
+
+
+/* MOBILE: 2 cards per row, fill more width */
+@media (max-width: 500px) {
+  #product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 boxes per row */
+    gap: 8px;              /* smaller gap to fill more space */
+    padding: 8px;           /* less padding on sides */
+    box-sizing: border-box; /* ensure padding included in width */
+  }
+
+  .product-card {
+    height: auto;           /* allow height to adjust */
+    margin: 0;              /* remove extra margins if any */
+  }
+
+  .product-card img {
+    width: 100%;            /* image fills the card width */
+    height: 180px;          /* image height */
+    object-fit: contain;    /* maintain aspect ratio */
+    border-radius: 8px;     /* slightly rounded corners */
+  } 
+  #nv-footer {
+   overflow-x: hidden;   /* prevent horizontal scroll */
+  }
+
+
+
+}
+

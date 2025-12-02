@@ -1,0 +1,288 @@
+/* ============================
+   FOOTER — CLEAN STRUCTURE
+============================ */
+.nv-footer {
+  background: #000;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  width: 100%;
+}
+
+/* ============================
+   FIXED (NON-MOVING) TOP STRIP
+============================ */
+.nv-prefooter-strip {
+  background: #000;
+  color: #fff;
+  padding: 22px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #444;
+  border-bottom: none;
+}
+
+.nv-strip-track {
+  white-space: nowrap;
+  margin-left: -50px;
+  font-size: 1.6rem;
+  font-weight: 750;
+  letter-spacing: 2px;
+  animation: none !important;
+}
+
+/* ============================
+   MAIN FOOTER LAYOUT
+============================ */
+.nv-footer-main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 60px 8% 40px;
+  gap: 80px; /* more natural spacing */
+  flex-wrap: nowrap;
+}
+
+/* LEFT SIDE */
+.nv-footer-left {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+.nv-footer-logo {
+  width: 260px;
+  margin-bottom: 20px;
+}
+
+.nv-footer-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* RIGHT SECTION WRAPPER — newly corrected grouping */
+.nv-footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;    /* spacing between columns & icons rows */
+  width: 100%;
+}
+
+/* ============================
+   ROW: 3 COLUMNS (TOP ROW)
+============================ */
+.nv-footer-columns {
+  display: flex;
+  gap: 70px;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.nv-footer-col {
+  flex: 1;
+  min-width: 140px;
+}
+
+.nv-footer-col h4 {
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.nv-footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.nv-footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.nv-footer-col ul li a:hover {
+  color: #fff;
+}
+
+/* ============================
+   ROW: SOCIAL ICONS (BOTTOM ROW)
+============================ */
+.nv-footer-right-icons {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: flex-end; /* move them to the right */
+  margin-left: 20px;
+}
+
+.nv-footer-right-icons img {
+  width: 55px;
+  height: 55px;
+  padding: 10px;
+  background: #111;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  transition: 0.3s ease;
+}
+
+.nv-footer-right-icons img:hover {
+  transform: scale(1.18);
+  background: #222;
+}
+
+/* ============================
+   COPYRIGHT BAR
+============================ */
+.nv-footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 2px solid #444;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+
+/* 👉 Make the three footer columns bigger */
+.nv-footer-second-row .nv-footer-col {
+  flex: 1;                 /* equal width */
+  min-width: 180px;        /* makes them bigger */
+}
+
+/* 👉 Reduce the space between the two second-row columns */
+.nv-footer-second-row {
+  display: flex;
+  gap: 25px;               /* tighten this to reduce the gap */
+}
+
+/* 👉 Reduce space between first-row Quick Links and icons */
+.nv-footer-first-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;               /* reduce separation here too */
+}
+
+
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+@media (max-width: 768px) {
+
+  /* STACK MAIN FOOTER VERTICALLY */
+  .nv-footer-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 30px 5%;
+  }
+
+  /* LEFT SIDE LOGO + TEXT */
+  .nv-footer-left {
+    width: 100%;           /* full width so logo + text stack nicely */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* keep logo left-aligned */
+    gap: 10px;
+  }
+  
+  .nv-footer-logo {
+    width: 180px; /* bigger on mobile but fits screen */
+    margin-bottom: 15px;
+  }
+
+  .nv-footer-desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #ccc;
+  }
+
+  /* RIGHT SIDE COLUMNS */
+  .nv-footer-right {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* MOBILE: stack headings cleanly */
+  .nv-footer-columns {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 25px;
+   width: 100%;
+  }
+
+  .nv-footer-col {
+   flex: 1 1 100%;
+   text-align: left;
+  }
+
+
+  /* ICONS ALIGN TO RIGHT ON FIRST ROW */
+  .nv-footer-right-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: -50px; /* lifts icons next to Quick Links */
+  }
+
+  .nv-footer-right-icons img {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+
+  /* LISTS */
+  .nv-footer-col ul {
+    margin-top: 5px;
+    text-align: left;
+  }
+
+  .nv-footer-col h4 {
+    font-size: 1rem;
+  }
+
+  .nv-footer-col ul li {
+    font-size: 0.9rem;
+  }
+
+  /* BOTTOM COPYRIGHT */
+  .nv-footer-bottom {
+    text-align: center;
+    font-size: 0.85rem;
+  }
+  
+   /* Hide first two columns */
+  .nv-footer-col:nth-child(1),
+  .nv-footer-col:nth-child(2) {
+    display: none;
+  }
+
+  /* Make the right side container relative so we can position icons */
+  .nv-footer-right {
+    position: relative;
+    width: 100%;
+  }
+
+  /* Icons absolutely positioned top-right, aligned with Contact Us */
+  .nv-footer-right-icons {
+    position: absolute;
+    top: -140px;           /* aligns with top of Contact Us column */
+    right: 0;         /* sticks to right edge */
+    display: flex;
+    gap: 15px;
+  }
+
+  /* Contact Us column full width */
+  .nv-footer-col:nth-child(3) {
+    width: 100%;
+  }
+}
+
+
+
+

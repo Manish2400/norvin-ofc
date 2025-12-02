@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NORVIN Website</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/stopd" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="front.css" />
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="footer.css">
+
+  <!-- Internal Styling -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      color: #222;
+      line-height: 1.6;
+      background-color: #D2D2D2;
+      background-image:
+        repeating-linear-gradient(to right, transparent 0 100px, #25283b22 100px 101px),
+        repeating-linear-gradient(to bottom, transparent 0 100px, #25283b22 100px 101px);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    h1 { font-size: 3rem; font-weight: 700; }
+    h2 { font-size: 2rem; font-weight: 600; }
+    h3 { font-size: 1.5rem; font-weight: 600; }
+    p  { font-size: 1rem; color: #444; }
+    .small-text { font-size: 0.875rem; color: #666; }
+
+    body::before {
+      position: absolute;
+      width: min(1400px, 90vw);
+      top: 10%;
+      left: 50%;
+      height: 90%;
+      transform: translateX(-50%);
+      content: '';
+      background-image: url(images/bg.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: top center;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+
+<body>
+
+
+
+
+  
+<!-- <div id="nv-loader">
+  <video autoplay muted playsinline id="nv-loader-video">
+    <source src="introo.mp4" type="video/mp4">
+  </video>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+  
+<div id="navbar-placeholder"></div>
+
+<!-- 🔥 HERO IMAGE SECTION (Between Navbar + Top Products) -->
+<section class="hero-image-section">
+  <img src="images/background.jpeg" alt="">
+</section>
+<section class="featured-products">
+  <p class="fp-top-label">Trending Now</p>
+
+  <!-- ⭐ STAR + GLOW WRAPPER -->
+  <div class="fp-glow-wrap">
+    <img class="fp-glow-img" src="images/star.png" alt="">
+    <span class="fp-glow-behind"></span>
+  </div>
+
+  <div class="fp-line"></div>
+
+  <h1 class="fp-main-heading" data-text="TOP PRODUCTS">TOP PRODUCTS</h1>
+
+  <div class="fp-row">
+
+    <div class="fp-card" data-id="5" onclick="openProduct(this)">
+      <span class="fp-tag">Trending Now</span>
+      <img src="images/MAZBOOT.png" alt="">
+      <h3>MAZBOOT</h3>
+    </div>
+
+    <div class="fp-card" data-id="6" onclick="openProduct(this)">
+      <span class="fp-tag">Best Seller</span>
+      <img src="images/shade.png" alt="">
+      <h3>SHADE</h3>
+    </div>
+
+    <div class="fp-card" data-id="1" onclick="openProduct(this)">
+      <span class="fp-tag">Best Seller</span>
+      <img src="images/lumino4.png" alt="">
+      <h3>LUMINO 4+4</h3>
+    </div>
+
+    <div class="fp-card" data-id="4" onclick="openProduct(this)">
+      <span class="fp-tag">New</span>
+      <img src="images/DOUBLESS6.png" alt="">
+      <h3>DOUBLE SS COMBINED</h3>
+    </div>
+
+  </div>
+</section>
+
+  <!-- ✅ Image Slider Section -->
+  <div class="banner">
+    <div class="slider" style="--quantity: 10">
+      <div class="item" style="--position: 1"><img src="images/AURA.png" alt=""></div>
+      <div class="item" style="--position: 2"><img src="images/SKRITHOLDER.png" alt=""></div>
+      <div class="item" style="--position: 3"><img src="images/FLEXBOX.png" alt=""></div>
+      <div class="item" style="--position: 4"><img src="images/MAZBOOT.png" alt=""></div>
+      <div class="item" style="--position: 5"><img src="images/MULTIPLUG.png" alt=""></div>
+      <div class="item" style="--position: 6"><img src="images/PANDENTHOLDER.png" alt=""></div>
+      <div class="item" style="--position: 7"><img src="images/SKRITHOLDER.png" alt=""></div>
+      <div class="item" style="--position: 8"><img src="images/POWERSTRIP.png" alt=""></div>
+      <div class="item" style="--position: 9"><img src="images/RADO.png" alt=""></div>
+      <div class="item" style="--position: 10"><img src="images/shade.png" alt=""></div>
+    </div>
+    <div class="content">
+      <h1 data-content="MODELS">MODELS</h1>
+      <div class="model"></div>
+    </div>
+  </div>
+
+<!-- SECTION WRAPPER -->
+<section class="best-selling">
+
+  <!-- NEW STRUCTURED HEADING AREA -->
+  <div class="bs-header-wrapper">
+
+    <!-- TOP HEADING (slightly left / centered like screenshot) -->
+    <h3 class="bs-top-heading">RUNNING OUT OF STOCK</h3>
+    
+    <!-- ⭐ STAR + GLOW WRAPPER -->
+    <div class="mm-glow-wrap">
+      <img class="mm-glow-img" src="images/star.png" alt="">
+      <span class="mm-glow-behind"></span>
+    </div>
+
+    <!-- BIG LINE -->
+    <div class="bs-long-line"></div>
+
+    <!-- MAIN HEADING -->
+    <h1 class="bs-main-heading">BEST SELLING THIS MONTH</h1>
+
+  </div>
+
+  <!-- CONTENT ROW -->
+  <div class="bs-content">
+
+    <!-- LEFT OPTIONS -->
+    <div class="left">
+      <div class="left-content">
+        <div class="option" onclick="showImage('img1')">SHADE</div>
+        <div class="option" onclick="showImage('img2')">lumino4</div>
+        <div class="option" onclick="showImage('img3')">6A DOUBLE SS COMBINED</div>
+      </div>
+    </div>
+
+    <!-- RIGHT IMAGE BOX -->
+    <div class="right">
+
+      <!-- ⭐ NEW WRAPPER ADDED -->
+      <div class="right-box">
+
+        <div class="image-wrapper">
+          <img id="img1" src="images/shade.png" data-id="6" data-name="Shade Lingam">
+          <img id="img2" src="images/lumino4.png" data-id="1" data-name="Lumino 4+4">
+          <img id="img3" src="images/DOUBLESS6.png" data-id="4" data-name="6A DOUBLE SS COMBINED">
+        </div>
+
+        <a id="image-button" href="#" class="image-button">Go Somewhere</a>
+
+      </div>
+      <!-- END WRAPPER -->
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+<section class="nv-why-section">
+  <div class="nv-why-wrap">
+
+    <!-- LEFT — IMAGE -->
+    <div class="nv-why-image">
+      <img src="images/handshake.png" alt="Manufacturing Image">
+    </div>
+
+    <!-- RIGHT — POINTS -->
+    <div class="nv-why-content">
+      <h2>Why Distributors Choose Norvin</h2>
+
+      <div class="nv-why-point">
+        <h3>⚡ Engineered for Reliability</h3>
+        <p>Our switches, sockets, and extension units are built for real-world industrial performance.</p>
+      </div>
+
+      <div class="nv-why-point">
+        <h3>🏭 High-Volume Manufacturing</h3>
+        <p>Designed for bulk supply — consistent output, stable quality, and smooth production cycles.</p>
+      </div>
+
+      <div class="nv-why-point">
+        <h3>🧪 Strict Quality Control</h3>
+        <p>Every unit goes through layered QC checks for durability, safety, and electrical stability.</p>
+      </div>
+
+      <div class="nv-why-point">
+        <h3>🤝 Built for B2B Partnerships</h3>
+        <p>We work directly with wholesalers and distributors for long-term supply relationships.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+  
+
+
+  <script>
+    AOS.init({ duration: 1500, once: true });
+  </script>
+<script src="script.js" defer></script>
+<script src="nav.js"></script>
+
+
+<div id="nv-footer"></div>
+<script>
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("nv-footer").innerHTML = html;
+    });
+</script>
+
+</body>
+</html>
