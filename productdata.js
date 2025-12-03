@@ -15,7 +15,7 @@ export const products = [
   category: "Power Strip",
   color: "White",
   types: ["2y", "5y"],
-  image: "images/lumino3.png", // update filename if different
+  image: "images/LUMINO3.png", // update filename if different
   desc: "Balanced 3+3 power strip engineered for consistent performance. Strong white outer shell with long cable options (2y/5y). Ideal for office desks, home electronics, and medium-load usage.",
   relatedIds: ["1", "3"]
 }
@@ -26,7 +26,7 @@ export const products = [
   category: "Power Strip",
   color: "White",
   types: ["2y", "5y"],
-  image: "images/lumino2.png", // update filename if different
+  image: "images/LUMINO2.png", // update filename if different
   desc: "Compact 2+2 power strip with a sturdy white body. Designed for light-duty usage with long cable variants (2y/5y). Perfect for home desks, chargers, lamps, and low-load appliances.",
   relatedIds: ["1", "2"]
 }
@@ -48,7 +48,7 @@ export const products = [
   category: "Flexbox",
   color: "Orange & White",
   types: ["2x5", "2x10", "3x5"],
-  image: "images/mazboot.png", 
+  image: "images/MAZBOOT.png", 
   desc: "Heavy-duty Mazboot flexbox featuring a durable orange body with a built-in overload protection switch. Equipped with multiple universal sockets for powering household devices safely. Designed for long-term reliability, smooth rewinding, and stable performance in home, office, and workshop environments.",
   relatedIds: ["4"]
 },
